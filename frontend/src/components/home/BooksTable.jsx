@@ -7,7 +7,7 @@ const BooksTable = ({ books }) => {
   return (
     <table className='w-full border-separate border-spacing-2'>
       <thead>
-        <tr>
+        <tr className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>
           <th className='border border-slate-600 rounded-md'>No</th>
           <th className='border border-slate-600 rounded-md'>Title</th>
           <th className='border border-slate-600 rounded-md max-md:hidden'>
@@ -37,13 +37,13 @@ const BooksTable = ({ books }) => {
             <td className='border border-slate-700 rounded-md text-center'>
               <div className='flex justify-center gap-x-4'>
                 <Link to={`/books/details/${book._id}`}>
-                  <BsInfoCircle className='text-2xl text-green-800' />
+                  <BsInfoCircle className='text-2xl text-green-800 hover:text-white transition duration-300' />
                 </Link>
                 <Link to={`/books/edit/${book._id}`}>
-                  <AiOutlineEdit className='text-2xl text-yellow-600' />
+                  <AiOutlineEdit className='text-2xl text-yellow-600 hover:text-white transition duration-300' />
                 </Link>
                 <Link to={`/books/delete/${book._id}`}>
-                  <MdOutlineDelete className='text-2xl text-red-600' />
+                  <MdOutlineDelete className='text-2xl text-red-600 hover:text-white transition duration-300' />
                 </Link>
               </div>
             </td>
